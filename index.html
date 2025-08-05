@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mural de Oportunidades - Saúde e Bem Estar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #777;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+      gap: 10px;
+    }
+
+    .search-container input {
+      padding: 8px;
+      font-size: 16px;
+      width: 300px;
+    }
+
+    .search-container button {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      background-color: #eee;
+      margin-bottom: 10px;
+    }
+
+    .card small {
+      display: block;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      color: #0a9396;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #333;
+      flex-grow: 1;
+    }
+
+    .card button {
+      margin-top: 10px;
+      padding: 8px;
+      background-color: #0a9396;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #00767b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mural de oportunidades</h1>
+    <p>Saúde e Bem Estar</p>
+  </header>
+
+  <div class="search-container">
+    <input type="text" placeholder="Buscar serviço..." />
+    <button>BUSCAR</button>
+    <button>FILTRAR</button>
+  </div>
+
+  <section class="grid">
+    <div class="card">
+      <img src="" alt="Imagem">
+      <small>Horários: Seg à Sex: 18h</small>
+      <small>Academia do Bairro</small>
+      <h3>Sessões Alongamento</h3>
+      <p>Sessões de alongamento guiadas para melhorar a flexibilidade e reduzir a tensão muscular.</p>
+      <button>Ver Detalhes</button>
+    </div>
+
+    <div class="card">
+      <img src="" alt="Imagem">
+      <small>Horários: Ter e Qui: 14h</small>
+      <small>Farmácia Popular</small>
+      <h3>Medição de Pressão</h3>
+      <p>Medição de pressão arterial e orientações sobre os cuidados com a saúde cardiovascular.</p>
+      <button>Ver Detalhes</button>
+    </div>
+
+    <div class="card">
+      <img src="" alt="Imagem">
+      <small>Horários: Seg e Sex: 09h</small>
+      <small>Praça principal</small>
+      <h3>Aulas de Yoga</h3>
+      <p>Equilíbrio entre corpo e mente com foco em respiração, alongamento e relaxamento.</p>
+      <button>Ver Detalhes</button>
+    </div>
+
+    <div class="card">
+      <img src="" alt="Imagem">
+      <small>Horários: Seg e Sex: 19h</small>
+      <small>Academia do Bairro</small>
+      <h3>Avaliação IMC</h3>
+      <p>Avaliação do índice de massa corporal (IMC) e da composição corporal.</p>
+      <button>Ver Detalhes</button>
+    </div>
+
+    <div class="card">
+      <img src="" alt="Imagem">
+      <small>Horários: Terças: 20h</small>
+      <small>Laboratório Clínico</small>
+      <h3>Hemograma</h3>
+      <p>Exame de sangue para identificar anemia, infecções e outras condições de saúde.</p>
+      <button>Ver Detalhes</button>
+    </div>
+
+    <div class="card">
+      <img src="" alt="Imagem">
+      <small>Horários: Quartas: 10h</small>
+      <small>Academia do Bairro</small>
+      <h3>Espirometria</h3>
+      <p>Teste de função pulmonar para avaliar a capacidade respiratória e diagnósticos de distúrbios.</p>
+      <button>Ver Detalhes</button>
+    </div>
+  </section>
+
+</body>
+</html>
