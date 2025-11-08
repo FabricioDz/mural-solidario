@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,6 +13,7 @@
       padding: 0;
     }
 
+    /* Cabeçalho */
     header {
       background: linear-gradient(135deg, #0a9396, #007b7f);
       color: white;
@@ -20,22 +22,28 @@
     }
 
     header h1 {
-      font-size: 2.8em;
+      font-size: 3.5em;
       margin-bottom: 10px;
+      color: white;
+      -webkit-text-stroke: 2px black;
+      text-stroke: 2px black;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     }
 
-    header p {
+    header p.subtitulo {
+      font-size: 1.7em;
+      font-weight: 600;
+      color: #f0fdfa;
       margin: 5px 0;
     }
 
-    header .subtitulo {
-      font-size: 1.6em;
-      font-weight: 500;
-    }
-
-    header .local {
+    header p.local {
       font-size: 1.2em;
+      margin-top: 10px;
       color: #dff6f0;
+      font-weight: 500;
     }
 
     main {
@@ -51,6 +59,7 @@
       color: #0a9396;
     }
 
+    /* Cards */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -84,6 +93,12 @@
       background: #007b7f;
     }
 
+    .card.anuncio {
+      background-color: #f5fff8;
+      border: 1px dashed #0a9396;
+    }
+
+    /* Formulários */
     form {
       margin-top: 20px;
     }
@@ -120,11 +135,6 @@
       text-align: center;
       padding: 10px;
       margin-top: 30px;
-    }
-
-    .card.anuncio {
-      background-color: #f5fff8;
-      border: 1px dashed #0a9396;
     }
   </style>
 </head>
