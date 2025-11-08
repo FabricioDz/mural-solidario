@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Mural Solidário</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f7f7; }
+    header { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 40px 20px; }
+    nav { background-color: #005f73; text-align: center; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 700px; margin: 30px auto; background: white; border-radius: 10px; padding: 25px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1, h2 { color: #0a9396; }
+    label { font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 8px; margin: 6px 0 15px 0; border: 1px solid #ccc; border-radius: 5px; }
+    button { background-color: #0a9396; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #007b7f; }
+    footer { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 10px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Deixe seu Feedback</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="cadastro.html">Cadastre-se</a>
+    <a href="feedback.html">Deixe seu Feedback</a>
+  </nav>
+
+  <main>
+    <h2>Conte-nos o que achou</h2>
+    <form action="https://formspree.io/f/maygpwny" method="POST">
+      <label>Nome (opcional):</label>
+      <input type="text" name="nome">
+
+      <label>O que achou do site?</label>
+      <textarea name="comentario" rows="3" required></textarea>
+
+      <label>Você conseguiu contato com algum prestador?</label>
+      <select name="contato">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <button type="submit">Enviar feedback</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Mural Solidário</p>
+  </footer>
+</body>
+</html>
