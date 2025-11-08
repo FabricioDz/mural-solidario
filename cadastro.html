@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Prestadores - Mural Solidário</title>
+  <title>Cadastro - Mural Solidário</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f7f7; }
-    header { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 40px 20px; }
-    nav { background-color: #005f73; text-align: center; padding: 10px 0; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    body { font-family: Arial, sans-serif; background-color: #f7f7f7; margin: 0; padding: 0; }
+    header { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 50px 20px; }
+    nav { background-color: #005f73; text-align: center; padding: 14px 0; }
+    nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 1.2em; }
     nav a:hover { text-decoration: underline; }
-    main { max-width: 700px; margin: 30px auto; background: white; border-radius: 10px; padding: 25px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1, h2 { color: #0a9396; }
-    label { font-weight: bold; }
-    input, textarea { width: 100%; padding: 8px; margin: 6px 0 15px 0; border: 1px solid #ccc; border-radius: 5px; }
-    button { background-color: #0a9396; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
-    button:hover { background-color: #007b7f; }
-    footer { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 10px; margin-top: 40px; }
+    main { max-width: 800px; margin: 40px auto; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    h1 { color: #0a9396; }
+    label { font-weight: bold; display: block; margin-top: 10px; }
+    input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em; }
+    button { background: #0a9396; color: white; border: none; padding: 12px 18px; border-radius: 6px; margin-top: 15px; cursor: pointer; font-size: 1.05em; }
+    button:hover { background: #007b7f; }
+    footer { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 15px; margin-top: 50px; font-size: 1.1em; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Cadastro de Prestadores</h1>
+    <h1>Cadastre seu serviço</h1>
   </header>
 
   <nav>
@@ -31,8 +31,8 @@
   </nav>
 
   <main>
-    <h2>Cadastre-se para divulgar seu serviço gratuito</h2>
-    <form action="https://formspree.io/f/mnqedlby" method="POST">
+    <form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Novo cadastro - Mural Solidário">
       <label>Nome completo:</label>
       <input type="text" name="nome" required>
 
