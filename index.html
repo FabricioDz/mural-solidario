@@ -7,57 +7,51 @@
 <style>
   * { box-sizing: border-box; }
 
-  html, body {
+  body {
     margin: 0;
-    padding: 0;
-    height: 100%;
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   /* ===== Cabeçalho ===== */
   header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 120px;
     background: linear-gradient(135deg, #0a9396, #007b7f);
     color: white;
     text-align: center;
-    padding-top: 15px;
-    z-index: 1000;
+    padding: 20px 10px;
   }
 
   header h1 {
-    margin: 0;
     font-size: 2.8em;
+    margin: 0;
+    font-weight: 800;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   }
 
   header p.subtitulo {
     font-size: 1.3em;
-    margin: 5px 0 2px 0;
+    margin: 4px 0;
     color: #f0fdfa;
   }
 
   header p.local {
-    margin: 0;
-    color: #dff6f0;
     font-size: 1em;
+    color: #dff6f0;
+    margin: 0;
   }
 
   /* ===== Barra de navegação ===== */
   nav {
-    position: fixed;
-    top: 120px; /* imediatamente abaixo do header */
-    left: 0;
-    right: 0;
     background-color: #005f73;
-    border-bottom: 3px solid #0a9396;
     text-align: center;
     padding: 12px 0;
-    z-index: 900;
+    border-bottom: 3px solid #0a9396;
+    position: sticky;
+    top: 0; /* faz a barra grudar abaixo do header */
+    z-index: 100;
   }
 
   nav a {
@@ -68,19 +62,13 @@
     font-size: 1.15em;
   }
 
-  nav a:hover {
-    text-decoration: underline;
-  }
+  nav a:hover { text-decoration: underline; }
 
   /* ===== Conteúdo ===== */
   main {
-    position: absolute;
-    top: 165px; /* abaixo da barra */
-    bottom: 60px; /* acima do rodapé */
-    left: 0;
-    right: 0;
+    flex: 1;
     overflow-y: auto;
-    padding: 40px;
+    padding: 30px;
   }
 
   .grid {
@@ -104,11 +92,7 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
-  .card h3 {
-    color: #005f73;
-    font-size: 1.6em;
-    margin-top: 0;
-  }
+  .card h3 { color: #005f73; font-size: 1.6em; margin-top: 0; }
 
   .card button {
     background: #0a9396;
@@ -117,93 +101,7 @@
     padding: 12px 16px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1.1em;
-    margin-top: 10px;
-  }
-
-  .card button:hover {
-    background: #007b7f;
-  }
-
-  /* ===== Rodapé ===== */
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(135deg, #0a9396, #007b7f);
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-size: 1.05em;
-    z-index: 1000;
-  }
-
-  /* ===== Responsivo ===== */
-  @media (max-width: 600px) {
-    header h1 { font-size: 2em; }
-    nav a { margin: 0 10px; font-size: 1em; }
-    .card { font-size: 1em; }
-  }
-</style>
-</head>
-<body>
-
-  <header>
-    <h1>Mural Solidário</h1>
-    <p class="subtitulo">Oportunidades gratuitas de saúde e bem-estar</p>
-    <p class="local">Tanguá, Almirante Tamandaré - PR</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="cadastro.html">Cadastrar Oportunidade</a>
-    <a href="feedback.html">Avalie sua Experiência</a>
-  </nav>
-
-  <main>
-    <section class="grid">
-      <div class="card">
-        <h3>Acupuntura</h3>
-        <p><strong>Prestadora:</strong> Nathaly Jimenez</p>
-        <p><strong>Horário:</strong> Sábados, 09h às 11h30</p>
-        <p><strong>Local:</strong> À combinar</p>
-        <p><strong>Agendamento:</strong> Necessário</p>
-        <button onclick="window.location.href='detalhes-acupuntura.html'">Ver Detalhes</button>
-      </div>
-
-      <div class="card">
-        <h3>Sessão de Alongamento</h3>
-        <p><strong>Prestadora:</strong> Letícia Santos</p>
-        <p><strong>Horário:</strong> Quartas, 07h30 às 08h</p>
-        <p><strong>Local:</strong> Parque Tingui</p>
-        <p>(Não é necessário agendar)</p>
-        <button onclick="window.location.href='detalhes-alongamento.html'">Ver Detalhes</button>
-      </div>
-
-      <div class="card">
-        <h3>Medição de Pressão</h3>
-        <p><strong>Prestador:</strong> Dr. Renato Bardelli</p>
-        <p><strong>Horário:</strong> Quintas, 14h às 16h</p>
-        <p><strong>Local:</strong> Academia Dance e Training</p>
-        <p><strong>Agendamento:</strong> Necessário</p>
-        <button onclick="window.location.href='detalhes-pressao.html'">Ver Detalhes</button>
-      </div>
-
-      <div class="card">
-        <h3>Anuncie Aqui</h3>
-        <p>Divulgue novas oportunidades gratuitas de saúde e bem-estar.</p>
-        <button onclick="window.location.href='cadastro.html'">Cadastrar Serviço</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054</p>
-  </footer>
-
-</body>
-</html>
+    font-size: 1.
 
 
 
