@@ -16,7 +16,6 @@
     flex-direction: column;
   }
 
-  /* ===== Cabeçalho ===== */
   header {
     background: linear-gradient(135deg, #0a9396, #007b7f);
     color: white;
@@ -25,7 +24,7 @@
   }
 
   header h1 {
-    font-size: 2.8em;
+    font-size: 3em;
     margin: 0;
     font-weight: 800;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
@@ -43,14 +42,13 @@
     margin: 0;
   }
 
-  /* ===== Barra de navegação ===== */
   nav {
     background-color: #005f73;
     text-align: center;
     padding: 12px 0;
     border-bottom: 3px solid #0a9396;
     position: sticky;
-    top: 0; /* faz a barra grudar abaixo do header */
+    top: 0;
     z-index: 100;
   }
 
@@ -64,7 +62,6 @@
 
   nav a:hover { text-decoration: underline; }
 
-  /* ===== Conteúdo ===== */
   main {
     flex: 1;
     overflow-y: auto;
@@ -107,7 +104,6 @@
 
   .card button:hover { background: #007b7f; }
 
-  /* ===== Rodapé ===== */
   footer {
     background: linear-gradient(135deg, #0a9396, #007b7f);
     color: white;
@@ -115,67 +111,64 @@
     padding: 15px;
     font-size: 1.1em;
   }
-
-  @media (max-width: 600px) {
-    header h1 { font-size: 2em; }
-    nav a { margin: 0 10px; font-size: 1em; }
-  }
 </style>
 </head>
 <body>
 
-  <header>
-    <h1>Mural Solidário</h1>
-    <p class="subtitulo">Oportunidades gratuitas de saúde e bem-estar</p>
-    <p class="local">Tanguá, Almirante Tamandaré - PR</p>
-  </header>
+<header>
+  <h1>Mural Solidário</h1>
+  <p class="subtitulo">Oportunidades gratuitas de saúde e bem-estar</p>
+  <p class="local">Tanguá, Almirante Tamandaré - PR</p>
+</header>
 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="cadastro.html">Cadastrar Oportunidade</a>
-    <a href="feedback.html">Avalie sua Experiência</a>
-  </nav>
+<nav>
+  <a href="index.html">Início</a>
+  <a href="cadastro.html">Cadastrar Oportunidade</a>
+  <a href="feedback.html">Avalie sua Experiência</a>
+</nav>
 
-  <main>
-    <section class="grid">
-      <div class="card">
-        <h3>Acupuntura</h3>
-        <p><strong>Prestadora:</strong> Nathaly Jimenez</p>
-        <p><strong>Horário:</strong> Sábados, 09h às 11h30</p>
-        <p><strong>Local:</strong> À combinar</p>
-        <p><strong>Agendamento:</strong> Necessário</p>
-        <button onclick="window.location.href='detalhes-acupuntura.html'">Ver Detalhes</button>
-      </div>
+<main>
+  <section class="grid">
+    <div class="card">
+      <h3>Acupuntura</h3>
+      <p><strong>Prestadora:</strong> Nathaly Jimenez</p>
+      <p><strong>Horário:</strong> Sábados, 09h às 11h30</p>
+      <p><strong>Local:</strong> À combinar</p>
+      <p><strong>Agendamento:</strong> Necessário</p>
+      <button onclick="window.location.href='detalhes-acupuntura.html'">Ver Detalhes</button>
+    </div>
 
-      <div class="card">
-        <h3>Sessão de Alongamento</h3>
-        <p><strong>Prestadora:</strong> Letícia Santos</p>
-        <p><strong>Horário:</strong> Quartas, 07h30 às 08h</p>
-        <p><strong>Local:</strong> Parque Tingui</p>
-        <p>(Não é necessário agendar)</p>
-        <button onclick="window.location.href='detalhes-alongamento.html'">Ver Detalhes</button>
-      </div>
+    <div class="card">
+      <h3>Sessão de Alongamento</h3>
+      <p><strong>Prestadora:</strong> Letícia Santos</p>
+      <p><strong>Horário:</strong> Quartas, 07h30 às 08h</p>
+      <p><strong>Local:</strong> Parque Tingui</p>
+      <p>(Não é necessário agendar)</p>
+      <button onclick="window.location.href='detalhes-alongamento.html'">Ver Detalhes</button>
+    </div>
 
-      <div class="card">
-        <h3>Medição de Pressão</h3>
-        <p><strong>Prestador:</strong> Dr. Renato Bardelli</p>
-        <p><strong>Horário:</strong> Quintas, 14h às 16h</p>
-        <p><strong>Local:</strong> Academia Dance e Training</p>
-        <p><strong>Agendamento:</strong> Necessário</p>
-        <button onclick="window.location.href='detalhes-pressao.html'">Ver Detalhes</button>
-      </div>
+    <div class="card">
+      <h3>Medição de Pressão</h3>
+      <p><strong>Prestador:</strong> Dr. Renato Bardelli</p>
+      <p><strong>Horário:</strong> Quintas, 14h às 16h</p>
+      <p><strong>Local:</strong> Academia Dance e Training</p>
+      <p><strong>Agendamento:</strong> Necessário</p>
+      <button onclick="window.location.href='detalhes-pressao.html'">Ver Detalhes</button>
+    </div>
 
-      <div class="card">
-        <h3>Anuncie Aqui</h3>
-        <p>Divulgue novas oportunidades gratuitas de saúde e bem-estar.</p>
-        <button onclick="window.location.href='cadastro.html'">Cadastrar Serviço</button>
-      </div>
-    </section>
-  </main>
+    <div class="card">
+      <h3>Anuncie Aqui</h3>
+      <p>Divulgue novas oportunidades gratuitas de saúde e bem-estar.</p>
+      <button onclick="window.location.href='cadastro.html'">Cadastrar Serviço</button>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <p>© 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054</p>
-  </footer>
+<footer>
+  <p>© 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054</p>
+</footer>
 
 </body>
 </html>
+
+
