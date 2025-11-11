@@ -65,7 +65,7 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 
-  label { font-weight: bold; display: block; margin-top: 15px; }
+  label { font-weight: bold; display: block; margin-top: 15px; color: #005f73; }
   input, textarea, select {
     width: 100%; padding: 10px; margin-top: 5px;
     border: 1px solid #ccc; border-radius: 6px; font-size: 1em;
@@ -84,6 +84,18 @@
     color: white; text-align: center;
     padding: 15px; font-size: 1.1em;
   }
+
+  .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+  }
+
+  .radio-group label {
+    font-weight: normal;
+    color: #333;
+  }
 </style>
 </head>
 <body>
@@ -98,51 +110,55 @@
 
 <main>
   <form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="Feedback - Mural Solidário">
+    <input type="hidden" name="_subject" value="Novo feedback - Mural Solidário">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
 
-    <label>Nome (opcional):</label>
+    <label>Seu nome (opcional):</label>
     <input type="text" name="nome">
 
-    <label>Você conseguiu visualizar facilmente os serviços disponíveis?</label>
-    <select name="facilidade_visualizacao" required>
-      <option value="Sim">Sim</option>
-      <option value="Parcialmente">Parcialmente</option>
-      <option value="Não">Não</option>
+    <label>Você encontrou facilmente as informações no site?</label>
+    <select name="facilidade" required>
+      <option value="">Selecione</option>
+      <option>Sim, com facilidade</option>
+      <option>Mais ou menos</option>
+      <option>Não, tive dificuldade</option>
     </select>
 
-    <label>O site funcionou bem no seu celular ou computador?</label>
-    <select name="funcionamento" required>
-      <option value="Sim">Sim</option>
-      <option value="Parcialmente">Parcialmente</option>
-      <option value="Não">Não</option>
-    </select>
-
-    <label>Você chegou a entrar em contato com algum prestador de serviço?</label>
-    <select name="contato_realizado" required>
-      <option value="Sim">Sim</option>
-      <option value="Ainda não">Ainda não</option>
-    </select>
-
-    <label>Como você avalia a facilidade de uso do site?</label>
-    <select name="avaliacao_facilidade" required>
-      <option value="Muito fácil">Muito fácil</option>
-      <option value="Fácil">Fácil</option>
-      <option value="Regular">Regular</option>
-      <option value="Difícil">Difícil</option>
+    <label>Como avalia a aparência e organização do site?</label>
+    <select name="aparencia" required>
+      <option value="">Selecione</option>
+      <option>Excelente</option>
+      <option>Boa</option>
+      <option>Regular</option>
+      <option>Ruim</option>
     </select>
 
     <label>Você recomendaria o Mural Solidário para outras pessoas?</label>
     <select name="recomendacao" required>
-      <option value="Sim">Sim</option>
-      <option value="Talvez">Talvez</option>
-      <option value="Não">Não</option>
+      <option value="">Selecione</option>
+      <option>Sim, com certeza</option>
+      <option>Talvez</option>
+      <option>Não</option>
     </select>
 
-    <label>Dê uma nota geral para o site (0 a 10):</label>
-    <input type="number" name="nota" min="0" max="10" required>
+    <label>De 0 a 10, qual nota você daria para sua experiência?</label>
+    <div class="radio-group">
+      <label><input type="radio" name="nota" value="0"> 0</label>
+      <label><input type="radio" name="nota" value="1"> 1</label>
+      <label><input type="radio" name="nota" value="2"> 2</label>
+      <label><input type="radio" name="nota" value="3"> 3</label>
+      <label><input type="radio" name="nota" value="4"> 4</label>
+      <label><input type="radio" name="nota" value="5"> 5</label>
+      <label><input type="radio" name="nota" value="6"> 6</label>
+      <label><input type="radio" name="nota" value="7"> 7</label>
+      <label><input type="radio" name="nota" value="8"> 8</label>
+      <label><input type="radio" name="nota" value="9"> 9</label>
+      <label><input type="radio" name="nota" value="10"> 10</label>
+    </div>
 
-    <label>Comentários adicionais:</label>
-    <textarea name="comentarios" rows="4" placeholder="Deixe aqui sugestões ou observações..."></textarea>
+    <label>Deixe aqui seu comentário ou sugestão:</label>
+    <textarea name="comentario" rows="4" placeholder="Conte-nos o que achou do site ou o que poderíamos melhorar"></textarea>
 
     <button type="submit">Enviar Feedback</button>
   </form>
@@ -154,4 +170,5 @@
 
 </body>
 </html>
+
 
