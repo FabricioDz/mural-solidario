@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback - Mural Solidário</title>
+  <title>Avalie sua Experiência - Mural Solidário</title>
   <style>
     body { font-family: Arial, sans-serif; background-color: #f7f7f7; margin: 0; padding: 0; }
-    header { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 50px 20px; }
+    header {
+      background: linear-gradient(135deg, #0a9396, #007b7f);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    }
     nav { background-color: #005f73; text-align: center; padding: 14px 0; }
-    nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 1.2em; }
+    nav a { color: white; text-decoration: none; margin: 0 25px; font-weight: bold; font-size: 1.25em; }
     nav a:hover { text-decoration: underline; }
     main { max-width: 800px; margin: 40px auto; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
     h1 { color: #0a9396; }
@@ -21,31 +27,27 @@
 </head>
 <body>
   <header>
-    <h1>Deixe seu Feedback</h1>
+    <h1>Avalie sua Experiência</h1>
   </header>
 
   <nav>
     <a href="index.html">Início</a>
-    <a href="cadastro.html">Cadastre-se</a>
-    <a href="feedback.html">Deixe seu Feedback</a>
+    <a href="cadastro.html">Cadastrar Oportunidade</a>
+    <a href="feedback.html">Avalie sua Experiência</a>
   </nav>
 
   <main>
     <form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Feedback - Mural Solidário">
-
       <label>Nome (opcional):</label>
       <input type="text" name="nome">
-
       <label>O que achou do site?</label>
       <textarea name="comentario" rows="4" required></textarea>
-
       <label>Você conseguiu contato com algum prestador?</label>
       <select name="contato">
         <option value="sim">Sim</option>
         <option value="nao">Não</option>
       </select>
-
       <button type="submit">Enviar feedback</button>
     </form>
   </main>
