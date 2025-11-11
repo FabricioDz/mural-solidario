@@ -1,68 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastrar Oportunidade - Mural Solidário</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #f7f7f7; margin: 0; padding: 0; }
-    header {
-      background: linear-gradient(135deg, #0a9396, #007b7f);
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-      text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-    }
-    nav { background-color: #005f73; text-align: center; padding: 14px 0; }
-    nav a { color: white; text-decoration: none; margin: 0 25px; font-weight: bold; font-size: 1.25em; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 800px; margin: 40px auto; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
-    h1 { color: #0a9396; }
-    label { font-weight: bold; display: block; margin-top: 10px; }
-    input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em; }
-    button { background: #0a9396; color: white; border: none; padding: 12px 18px; border-radius: 6px; margin-top: 15px; cursor: pointer; font-size: 1.05em; }
-    button:hover { background: #007b7f; }
-    footer { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 15px; margin-top: 50px; font-size: 1.1em; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastrar Oportunidade - Mural Solidário</title>
+<style>
+body { font-family: Arial, sans-serif; background-color: #f7f7f7; margin: 0; padding: 0; }
+header { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 50px 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
+nav { background-color: #005f73; text-align: center; padding: 14px 0; }
+nav a { color: white; text-decoration: none; margin: 0 25px; font-weight: bold; font-size: 1.25em; }
+nav a:hover { text-decoration: underline; }
+main { max-width: 800px; margin: 40px auto; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+h1 { color: white; }
+label { font-weight: bold; display: block; margin-top: 10px; }
+input, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em; }
+button { background: #0a9396; color: white; border: none; padding: 12px 18px; border-radius: 6px; margin-top: 15px; cursor: pointer; font-size: 1.05em; }
+button:hover { background: #007b7f; }
+footer { background: linear-gradient(135deg, #0a9396, #007b7f); color: white; text-align: center; padding: 15px; margin-top: 50px; font-size: 1.1em; }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Cadastrar Oportunidade</h1>
-  </header>
-
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="cadastro.html">Cadastrar Oportunidade</a>
-    <a href="feedback.html">Avalie sua Experiência</a>
-  </nav>
-
-  <main>
-    <form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Novo cadastro - Mural Solidário">
-      <label>Nome completo:</label>
-      <input type="text" name="nome" required>
-
-      <label>Serviço oferecido:</label>
-      <input type="text" name="servico" required>
-
-      <label>Horário disponível:</label>
-      <input type="text" name="horario" required>
-
-      <label>Local de atendimento:</label>
-      <input type="text" name="local" required>
-
-      <label>Informações adicionais:</label>
-      <textarea name="info" rows="3"></textarea>
-
-      <label>Email ou WhatsApp para contato:</label>
-      <input type="text" name="contato" required>
-
-      <button type="submit">Enviar cadastro</button>
-    </form>
-  </main>
-
-  <footer>
-    <p>© 2025 Mural Solidário</p>
-  </footer>
+<header><h1>Cadastrar Oportunidade</h1></header>
+<nav>
+<a href="index.html">Início</a>
+<a href="cadastro.html">Cadastrar Oportunidade</a>
+<a href="feedback.html">Avalie sua Experiência</a>
+</nav>
+<main>
+<form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Novo cadastro - Mural Solidário">
+<label>Nome completo:</label><input type="text" name="nome" required>
+<label>Serviço oferecido:</label><input type="text" name="servico" required>
+<label>Horário disponível:</label><input type="text" name="horario" required>
+<label>Local de atendimento:</label><input type="text" name="local" required>
+<label>Informações adicionais:</label><textarea name="info" rows="3"></textarea>
+<label>Email ou WhatsApp para contato:</label><input type="text" name="contato" required>
+<button type="submit">Enviar cadastro</button>
+</form>
+</main>
+<footer><p>© 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054</p></footer>
 </body>
 </html>
+
