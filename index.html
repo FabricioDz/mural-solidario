@@ -20,8 +20,8 @@
 
     header h1 {
       font-size: 4.5em;
-      color: white;
       font-weight: 900;
+      color: white;
       -webkit-text-stroke: 3px #000;
       text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
       margin: 0;
@@ -39,15 +39,15 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 20px;
+      margin: 0 25px;
       font-weight: bold;
-      font-size: 1.2em;
+      font-size: 1.25em;
     }
 
     nav a:hover { text-decoration: underline; }
 
     main {
-      max-width: 1100px;
+      max-width: 1250px;
       margin: 40px auto;
       background: white;
       border-radius: 12px;
@@ -57,8 +57,8 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 35px;
     }
 
     .card {
@@ -76,11 +76,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
-    .card h3 {
-      color: #005f73;
-      margin-top: 0;
-      font-size: 1.6em;
-    }
+    .card h3 { color: #005f73; font-size: 1.6em; margin-top: 0; }
 
     .card button {
       background: #0a9396;
@@ -103,13 +99,6 @@
       font-size: 1.1em;
       margin-top: 50px;
     }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.8em; -webkit-text-stroke: 2px #000; }
-      header p.subtitulo { font-size: 1.3em; }
-      .card { font-size: 1em; }
-      nav a { font-size: 1em; }
-    }
   </style>
 </head>
 <body>
@@ -121,8 +110,8 @@
 
   <nav>
     <a href="index.html">Início</a>
-    <a href="cadastro.html">Cadastre-se</a>
-    <a href="feedback.html">Deixe seu Feedback</a>
+    <a href="cadastro.html">Cadastrar Oportunidade</a>
+    <a href="feedback.html">Avalie sua Experiência</a>
   </nav>
 
   <main>
@@ -130,21 +119,28 @@
       <div class="card">
         <h3>Acupuntura</h3>
         <p><strong>Prestadora:</strong> Nathaly Jimenez</p>
-        <p><strong>Horário:</strong> Sábados, 09h às 11h30<br><strong>Local:</strong> À combinar<br>(Necessário agendar)</p>
+        <p><strong>Horário:</strong> Sábados, 09h às 11h30<br>
+        <strong>Local:</strong> À combinar<br>
+        <strong>Agendamento:</strong> Necessário<br>
+        <strong>Contato:</strong> <a href="mailto:agendar.acupuntura@gmail.com">agendar.acupuntura@gmail.com</a></p>
         <button onclick="window.location.href='detalhes-acupuntura.html'">Ver Detalhes</button>
       </div>
 
       <div class="card">
         <h3>Sessão de Alongamento</h3>
         <p><strong>Prestadora:</strong> Letícia Santos</p>
-        <p><strong>Horário:</strong> Quartas, 07h30 às 08h<br><strong>Local:</strong> Parque Tingui<br>(Não é necessário agendar)</p>
+        <p><strong>Horário:</strong> Quartas, 07h30 às 08h<br>
+        <strong>Local:</strong> Parque Tingui<br>(Não é necessário agendar)</p>
         <button onclick="window.location.href='detalhes-alongamento.html'">Ver Detalhes</button>
       </div>
 
       <div class="card">
         <h3>Medição de Pressão</h3>
         <p><strong>Prestador:</strong> Dr. Renato Bardelli</p>
-        <p><strong>Horário:</strong> Quintas, 14h às 16h<br><strong>Local:</strong> Academia Dance e Training<br>(Necessário agendar)</p>
+        <p><strong>Horário:</strong> Quintas, 14h às 16h<br>
+        <strong>Local:</strong> Academia Dance e Training<br>
+        <strong>Agendamento:</strong> Necessário<br>
+        <strong>Contato:</strong> <a href="mailto:agendar.med.pressao@gmail.com">agendar.med.pressao@gmail.com</a></p>
         <button onclick="window.location.href='detalhes-pressao.html'">Ver Detalhes</button>
       </div>
 
