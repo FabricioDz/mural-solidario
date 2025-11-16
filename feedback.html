@@ -106,7 +106,7 @@
     background: #056c77;
   }
 
-  /* Nota (0 a 10) em linha */
+  /* Nota 0–10 */
   .nota-container {
     display: flex;
     flex-wrap: wrap;
@@ -196,11 +196,14 @@
 
     <form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
 
-      <!-- Segurança formsubmit -->
+      <!-- Segurança -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
-      <!-- Redireciona para página de obrigado após envio -->
       <input type="hidden" name="_next" value="https://fabriciodz.github.io/mural-solidario/obrigado.html">
+
+      <!-- NOVO CAMPO (opcional) -->
+      <label>Nome (opcional):</label>
+      <input type="text" name="nome">
 
       <label>Qual serviço você utilizou?</label>
       <select name="servico">
