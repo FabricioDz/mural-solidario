@@ -3,14 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Avalie sua Experiência</title>
+<title>Avaliar Experiência</title>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
     font-family: Arial, sans-serif;
@@ -34,117 +30,121 @@
   header h1 {
     font-size: 2.2em;
     font-weight: 900;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.35);
   }
 
   /* ===================== BARRA ===================== */
   nav {
     background-color: #0a9396;
-    color: white;
-    text-align: center;
-    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    padding: 12px 10px;
     flex-shrink: 0;
+    height: 58px;
   }
 
   nav a {
     color: white;
     text-decoration: none;
-    margin: 0 18px;
-    font-size: 1.15em;
+    font-size: 1.2em;
     font-weight: bold;
   }
 
-  nav a:hover {
-    text-decoration: underline;
-  }
+  nav a:hover { text-decoration: underline; }
 
-  /* ===================== CONTEÚDO ===================== */
+  /* ===================== ÁREA ROLÁVEL ===================== */
   .content {
     overflow-y: auto;
-    padding: 25px;
     flex: 1;
+    padding: 25px;
+    height: calc(100vh - 58px - 90px);
   }
 
   /* ===================== FORMULÁRIO ===================== */
   form {
-    max-width: 650px;
+    max-width: 620px;
     margin: auto;
     background: white;
-    padding: 25px 30px;
+    padding: 25px;
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0,0,0,0.12);
   }
 
   label {
+    font-size: 1.1em;
+    font-weight: bold;
     display: block;
     margin-top: 15px;
-    font-weight: bold;
   }
 
   input, textarea, select {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     margin-top: 6px;
-    border-radius: 8px;
-    border: 1px solid #b5c3c3;
-    font-size: 1.05em;
-  }
-
-  textarea {
-    resize: vertical;
-    height: 120px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 1em;
   }
 
   button {
     background: #0a9396;
     color: white;
-    padding: 14px;
-    margin-top: 20px;
-    width: 100%;
+    padding: 12px;
     border: none;
     border-radius: 8px;
-    font-size: 1.15em;
+    font-size: 1.2em;
     cursor: pointer;
+    margin-top: 22px;
+    width: 100%;
   }
 
   button:hover {
     background: #056c77;
   }
 
-  /* ===================== RODAPÉ ===================== */
+  /* ===================== RODAPÉ FIXO ===================== */
   footer {
     background: linear-gradient(135deg, #005f73, #0a9396);
     color: white;
     text-align: center;
-    padding: 12px;
+    padding: 14px;
     font-size: 0.9em;
-    flex-shrink: 0;
+    min-height: 50px;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
   }
 
   /* ===================== MOBILE ===================== */
   @media (max-width: 600px) {
-    
-    header h1 {
-      font-size: 1.9em;
+
+    header h1 { font-size: 1.9em; }
+
+    nav {
+      height: 70px;
+      padding: 5px;
+      gap: 10px;
     }
 
     nav a {
-      margin: 0 10px;
       font-size: 1em;
+      line-height: 1.1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
     }
 
     .content {
       padding: 18px;
+      height: calc(100vh - 70px - 90px);
     }
 
-    form {
-      padding: 20px;
-    }
-
-    button {
-      font-size: 1.05em;
-      padding: 12px;
-    }
+    form { padding: 20px; }
   }
 </style>
 </head>
@@ -156,65 +156,28 @@
 </header>
 
 <nav>
-  <a href="index.html">Início</a>
-  <a href="cadastro.html">Cadastrar Oportunidade</a>
-  <a href="feedback.html">Avalie sua Experiência</a>
+  <a href="index.html">Mural</a>
+  <a href="cadastro.html">Cadastrar</a>
+  <a href="feedback.html">Avaliar</a>
 </nav>
 
 <div class="content">
 
   <form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
     
-    <input type="hidden" name="_subject" value="Novo Feedback - Mural Solidário">
+    <!-- Desativa CAPTCHA -->
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
 
-    <label>Seu nome (opcional)</label>
-    <input type="text" name="Nome">
-
-    <label>Como você avalia o Mural Solidário?</label>
-    <select name="Avaliação Geral" required>
-      <option value="">Selecione</option>
-      <option>Excelente</option>
-      <option>Muito bom</option>
-      <option>Bom</option>
-      <option>Regular</option>
-      <option>Ruim</option>
+    <label>Como você avalia a facilidade de uso do site?</label>
+    <select name="facilidade" required>
+      <option value="Muito fácil">Muito fácil</option>
+      <option value="Fácil">Fácil</option>
+      <option value="Regular">Regular</option>
+      <option value="Difícil">Difícil</option>
+      <option value="Muito difícil">Muito difícil</option>
     </select>
 
-    <label>Facilidade de uso do site (0 a 10)</label>
-    <input type="number" name="Facilidade (0 a 10)" min="0" max="10" required>
-
-    <label>Você recomendaria o Mural Solidário para outras pessoas?</label>
-    <select name="Recomendação" required>
-      <option value="">Selecione</option>
-      <option>Sim</option>
-      <option>Talvez</option>
-      <option>Não</option>
-    </select>
-
-    <label>Qual serviço você usou?</label>
-    <select name="Serviço Utilizado">
-      <option value="">Selecione</option>
-      <option>Acupuntura</option>
-      <option>Sessão de Alongamento</option>
-      <option>Medição de Pressão</option>
-    </select>
-
-    <label>Deixe seu comentário ou sugestão</label>
-    <textarea name="Comentário"></textarea>
-
-    <button type="submit">Enviar Feedback</button>
-
-  </form>
-
-</div>
-
-<footer>
-  © 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054
-</footer>
-
-</body>
-</html>
-
-
+    <label>As informações estavam claras?</label>
+    <select name="clareza" required>
+      <option value="Sim, totalmente claras">Sim, totalmente claras</option>
+      <option value="Sim, razoavelmente claras"
