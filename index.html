@@ -85,25 +85,14 @@ nav a:hover {
   box-shadow: 0 0 12px rgba(0,0,0,0.12);
   position: relative;
   padding-bottom: 70px;
-  overflow: hidden;
-}
-
-.card .media {
-  width: 100%;
-  height: 180px;
-  background: #dde7e9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #4a676b;
 }
 
 .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  display: block;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
 }
 
 .card .card-body {
@@ -206,13 +195,9 @@ footer {
 
   <div class="cards">
 
-    <!-- ================= ACUPUNTURA ================= -->
+    <!-- ACUPUNTURA -->
     <div class="card">
-      <div class="media" id="media-acup">Imagem Acupuntura</div>
-      <img id="img-acup" 
-           src="https://images.unsplash.com/photo-1598133894009-177e5a5c8f55?w=800"
-           onload="document.getElementById('media-acup').style.display='none';"
-           onerror="this.style.display='none';document.getElementById('media-acup').classList.remove('hidden');">
+      <img src="https://images.unsplash.com/photo-1598133894009-177e5a5c8f55?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center">
       <div class="card-body">
         <h3>Acupuntura</h3>
         <p>Sábados, 09h às 11h30</p>
@@ -222,13 +207,9 @@ footer {
       <button onclick="location.href='detalhes-acupuntura.html'">Ver Detalhes</button>
     </div>
 
-    <!-- ================= ALONGAMENTO ================= -->
+    <!-- ALONGAMENTO -->
     <div class="card">
-      <div class="media" id="media-along">Imagem Alongamento</div>
-      <img id="img-along" 
-           src="https://images.unsplash.com/photo-1599058917212-d750089bc07a?w=800"
-           onload="document.getElementById('media-along').style.display='none';"
-           onerror="this.style.display='none';document.getElementById('media-along').classList.remove('hidden');">
+      <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07a?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center">
       <div class="card-body">
         <h3>Sessão de Alongamento</h3>
         <p>Quartas, 07h30 às 08h</p>
@@ -238,13 +219,9 @@ footer {
       <button onclick="location.href='detalhes-alongamento.html'">Ver Detalhes</button>
     </div>
 
-    <!-- ================= PRESSÃO ================= -->
+    <!-- MEDIÇÃO DE PRESSÃO -->
     <div class="card">
-      <div class="media" id="media-press">Imagem Pressão</div>
-      <img id="img-press" 
-           src="https://images.unsplash.com/photo-1580281658741-5232a9b1c16e?w=800"
-           onload="document.getElementById('media-press').style.display='none';"
-           onerror="this.style.display='none';document.getElementById('media-press').classList.remove('hidden');">
+      <img src="https://images.unsplash.com/photo-1580281658741-5232a9b1c16e?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center">
       <div class="card-body">
         <h3>Medição de Pressão</h3>
         <p>Quintas, 14h às 16h</p>
@@ -254,13 +231,9 @@ footer {
       <button onclick="location.href='detalhes-pressao.html'">Ver Detalhes</button>
     </div>
 
-    <!-- ================= ANUNCIE AQUI ================= -->
+    <!-- ANUNCIE AQUI -->
     <div class="card">
-      <div class="media" id="media-anuncie">Imagem Anuncie</div>
-      <img id="img-anuncie" 
-           src="https://picsum.photos/seed/anuncie/800/600"
-           onload="document.getElementById('media-anuncie').style.display='none';"
-           onerror="this.style.display='none';document.getElementById('media-anuncie').classList.remove('hidden');">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center">
       <div class="card-body">
         <h3>Anuncie Aqui</h3>
         <p>Divulgação gratuita de novas oportunidades de saúde e bem-estar.</p>
@@ -272,7 +245,10 @@ footer {
 
 </div>
 
-<footer>© 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054</footer>
+<footer>
+  © 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054
+</footer>
 
 </body>
 </html>
+
