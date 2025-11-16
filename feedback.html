@@ -106,6 +106,28 @@
     background: #056c77;
   }
 
+  /* Nota (0 a 10) em linha */
+  .nota-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .nota-container label {
+    margin-top: 0;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .nota-container input[type="radio"] {
+    width: auto;
+    margin-top: 0;
+  }
+
   /* ===================== RODAPÉ FIXO ===================== */
   footer {
     background: linear-gradient(135deg, #005f73, #0a9396);
@@ -129,7 +151,6 @@
       font-size: 1.9em; 
     }
 
-    /* Barra igual às outras páginas */
     nav {
       height: 70px;
       padding: 12px 10px;
@@ -178,6 +199,8 @@
       <!-- Segurança formsubmit -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
+      <!-- Redireciona para página de obrigado após envio -->
+      <input type="hidden" name="_next" value="https://fabriciodz.github.io/mural-solidario/obrigado.html">
 
       <label>Qual serviço você utilizou?</label>
       <select name="servico">
@@ -186,6 +209,9 @@
         <option value="Medição de Pressão">Medição de Pressão</option>
         <option value="Outro">Outro</option>
       </select>
+
+      <label>Data em que utilizou o serviço:</label>
+      <input type="date" name="data_servico">
 
       <label>Como você avalia a facilidade de uso do site?</label>
       <select name="facilidade">
@@ -201,7 +227,19 @@
       </select>
 
       <label>Nota geral (0 a 10):</label>
-      <input type="number" name="nota" min="0" max="10" required>
+      <div class="nota-container">
+        <label><input type="radio" name="nota" value="0" required>0</label>
+        <label><input type="radio" name="nota" value="1">1</label>
+        <label><input type="radio" name="nota" value="2">2</label>
+        <label><input type="radio" name="nota" value="3">3</label>
+        <label><input type="radio" name="nota" value="4">4</label>
+        <label><input type="radio" name="nota" value="5">5</label>
+        <label><input type="radio" name="nota" value="6">6</label>
+        <label><input type="radio" name="nota" value="7">7</label>
+        <label><input type="radio" name="nota" value="8">8</label>
+        <label><input type="radio" name="nota" value="9">9</label>
+        <label><input type="radio" name="nota" value="10">10</label>
+      </div>
 
       <label>Comentários adicionais:</label>
       <textarea name="comentarios"></textarea>
