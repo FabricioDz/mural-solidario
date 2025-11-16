@@ -1,106 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avalie sua Experiência - Mural Solidário</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Avalie sua Experiência</title>
+
 <style>
-  * { box-sizing: border-box; }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
   body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: #f2f7f7;
+    color: #08333a;
     height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
   }
 
+  /* ===================== CABEÇALHO ===================== */
   header {
-    background: linear-gradient(135deg, #0a9396, #007b7f);
+    background: linear-gradient(135deg, #005f73, #0a9396);
     color: white;
     text-align: center;
-    padding: 20px 10px;
+    padding: 18px 10px;
+    flex-shrink: 0;
   }
 
   header h1 {
-    font-size: 2.8em;
-    margin: 0;
-    font-weight: 800;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    font-size: 2.2em;
+    font-weight: 900;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.35);
   }
 
+  /* ===================== BARRA ===================== */
   nav {
-    background-color: #005f73;
+    background-color: #0a9396;
+    color: white;
     text-align: center;
     padding: 12px 0;
-    border-bottom: 3px solid #0a9396;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    flex-shrink: 0;
   }
 
   nav a {
     color: white;
     text-decoration: none;
-    margin: 0 25px;
-    font-weight: bold;
+    margin: 0 18px;
     font-size: 1.15em;
+    font-weight: bold;
   }
 
-  nav a:hover { text-decoration: underline; }
+  nav a:hover {
+    text-decoration: underline;
+  }
 
-  main {
-    flex: 1;
+  /* ===================== CONTEÚDO ===================== */
+  .content {
     overflow-y: auto;
-    padding: 30px;
+    padding: 25px;
+    flex: 1;
   }
 
+  /* ===================== FORMULÁRIO ===================== */
   form {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 650px;
+    margin: auto;
     background: white;
+    padding: 25px 30px;
     border-radius: 12px;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
   }
 
-  label { font-weight: bold; display: block; margin-top: 15px; color: #005f73; }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+
   input, textarea, select {
-    width: 100%; padding: 10px; margin-top: 5px;
-    border: 1px solid #ccc; border-radius: 6px; font-size: 1em;
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #b5c3c3;
+    font-size: 1.05em;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 120px;
   }
 
   button {
-    background: #0a9396; color: white; border: none;
-    padding: 12px 18px; border-radius: 6px;
-    margin-top: 20px; cursor: pointer; font-size: 1.1em;
+    background: #0a9396;
+    color: white;
+    padding: 14px;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.15em;
+    cursor: pointer;
   }
 
-  button:hover { background: #007b7f; }
+  button:hover {
+    background: #056c77;
+  }
 
+  /* ===================== RODAPÉ ===================== */
   footer {
-    background: linear-gradient(135deg, #0a9396, #007b7f);
-    color: white; text-align: center;
-    padding: 15px; font-size: 1.1em;
+    background: linear-gradient(135deg, #005f73, #0a9396);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.9em;
+    flex-shrink: 0;
   }
 
-  .radio-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 5px;
-  }
+  /* ===================== MOBILE ===================== */
+  @media (max-width: 600px) {
+    
+    header h1 {
+      font-size: 1.9em;
+    }
 
-  .radio-group label {
-    font-weight: normal;
-    color: #333;
+    nav a {
+      margin: 0 10px;
+      font-size: 1em;
+    }
+
+    .content {
+      padding: 18px;
+    }
+
+    form {
+      padding: 20px;
+    }
+
+    button {
+      font-size: 1.05em;
+      padding: 12px;
+    }
   }
 </style>
 </head>
+
 <body>
 
-<header><h1>Avalie sua Experiência</h1></header>
+<header>
+  <h1>Avalie sua Experiência</h1>
+</header>
 
 <nav>
   <a href="index.html">Início</a>
@@ -108,64 +161,57 @@
   <a href="feedback.html">Avalie sua Experiência</a>
 </nav>
 
-<main>
+<div class="content">
+
   <form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="Novo feedback - Mural Solidário">
+    
+    <input type="hidden" name="_subject" value="Novo Feedback - Mural Solidário">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
 
-    <label>Seu nome (opcional):</label>
-    <input type="text" name="nome">
+    <label>Seu nome (opcional)</label>
+    <input type="text" name="Nome">
 
-    <label>Você encontrou facilmente as informações no site?</label>
-    <select name="facilidade" required>
-      <option value="">Selecione</option>
-      <option>Sim, com facilidade</option>
-      <option>Mais ou menos</option>
-      <option>Não, tive dificuldade</option>
-    </select>
-
-    <label>Como avalia a aparência e organização do site?</label>
-    <select name="aparencia" required>
+    <label>Como você avalia o Mural Solidário?</label>
+    <select name="Avaliação Geral" required>
       <option value="">Selecione</option>
       <option>Excelente</option>
-      <option>Boa</option>
+      <option>Muito bom</option>
+      <option>Bom</option>
       <option>Regular</option>
       <option>Ruim</option>
     </select>
 
+    <label>Facilidade de uso do site (0 a 10)</label>
+    <input type="number" name="Facilidade (0 a 10)" min="0" max="10" required>
+
     <label>Você recomendaria o Mural Solidário para outras pessoas?</label>
-    <select name="recomendacao" required>
+    <select name="Recomendação" required>
       <option value="">Selecione</option>
-      <option>Sim, com certeza</option>
+      <option>Sim</option>
       <option>Talvez</option>
       <option>Não</option>
     </select>
 
-    <label>De 0 a 10, qual nota você daria para sua experiência?</label>
-    <div class="radio-group">
-      <label><input type="radio" name="nota" value="0"> 0</label>
-      <label><input type="radio" name="nota" value="1"> 1</label>
-      <label><input type="radio" name="nota" value="2"> 2</label>
-      <label><input type="radio" name="nota" value="3"> 3</label>
-      <label><input type="radio" name="nota" value="4"> 4</label>
-      <label><input type="radio" name="nota" value="5"> 5</label>
-      <label><input type="radio" name="nota" value="6"> 6</label>
-      <label><input type="radio" name="nota" value="7"> 7</label>
-      <label><input type="radio" name="nota" value="8"> 8</label>
-      <label><input type="radio" name="nota" value="9"> 9</label>
-      <label><input type="radio" name="nota" value="10"> 10</label>
-    </div>
+    <label>Qual serviço você usou?</label>
+    <select name="Serviço Utilizado">
+      <option value="">Selecione</option>
+      <option>Acupuntura</option>
+      <option>Sessão de Alongamento</option>
+      <option>Medição de Pressão</option>
+    </select>
 
-    <label>Deixe aqui seu comentário ou sugestão:</label>
-    <textarea name="comentario" rows="4" placeholder="Conte-nos o que achou do site ou o que poderíamos melhorar"></textarea>
+    <label>Deixe seu comentário ou sugestão</label>
+    <textarea name="Comentário"></textarea>
 
     <button type="submit">Enviar Feedback</button>
+
   </form>
-</main>
+
+</div>
 
 <footer>
-  <p>© 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054</p>
+  © 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054
 </footer>
 
 </body>
