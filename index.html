@@ -6,40 +6,189 @@
 <title>Mural Solidário</title>
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; background:#f2f7f7; height:100vh; display:flex; flex-direction:column; overflow:hidden; }
-header { background: linear-gradient(135deg,#005f73,#0a9396); color:white; text-align:center; padding:25px 10px; }
-header h1 { font-size:2.6em; font-weight:900; }
-header h2 { font-size:1.1em; margin-top:8px; }
-nav { background:#0a9396; display:flex; justify-content:center; gap:60px; padding:12px 10px; height:58px; align-items:center; }
-nav a { color:white; text-decoration:none; font-size:1.2em; font-weight:bold; }
-.content { overflow-y:auto; flex:1; padding:25px; padding-bottom:140px; }
-.cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:25px; max-width:1100px; margin:auto; }
-.card { background:white; border-radius:14px; position:relative; padding-bottom:70px; box-shadow:0 0 12px rgba(0,0,0,0.12); overflow:hidden; }
-.card .media { width:100%; height:180px; background:#e6eef0; display:flex; align-items:center; justify-content:center; color:#7b9a9b; font-weight:bold; font-size:1rem; }
-.card img { width:100%; height:180px; object-fit:cover; display:block; }
-.card .card-body { padding:20px; }
-.card h3 { font-size:1.4em; color:#005f73; margin-bottom:10px; }
-.card p { font-size:1.05em; color:#08333a; margin-bottom:6px; }
-.card button { position:absolute; bottom:15px; left:15px; background:#0a9396; color:white; padding:12px 22px; border-radius:8px; border:none; font-size:1.05em; font-weight:700; min-width:140px; cursor:pointer; }
-.card button:hover { background:#056c77; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* fallback text if image doesn't load - visible when img has display:none */
-.card .media.hidden { display:flex; }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f7f7;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
-/* footer fixed */
-footer { background: linear-gradient(135deg,#005f73,#0a9396); color:white; text-align:center; padding:14px; font-size:0.9em; position:fixed; bottom:0; left:0; width:100%; }
+/* ==================== CABEÇALHO ==================== */
 
-/* mobile */
-@media (max-width:600px){
-  header h1 { font-size:2.1em; }
-  nav { height:70px; gap:10px; }
-  nav a { font-size:1em; line-height:1.1em; flex:1; display:flex; justify-content:center; }
-  .content { padding:20px; padding-bottom:160px; overflow-y:scroll; }
-  .card img { height:160px; }
+header {
+  background: linear-gradient(135deg, #005f73, #0a9396);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+header h1 {
+  font-size: 2.6em;
+  font-weight: 900;
+}
+
+header h2 {
+  font-size: 1.2em;
+  margin-top: 8px;
+}
+
+/* ==================== BARRA ==================== */
+
+nav {
+  background-color: #0a9396;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 12px 10px;
+  height: 58px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== CONTEÚDO ROLÁVEL ==================== */
+
+.content {
+  overflow-y: auto;
+  flex: 1;
+  padding: 25px;
+  padding-bottom: 140px;
+}
+
+/* ==================== CARDS ==================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 0;
+  box-shadow: 0 0 12px rgba(0,0,0,0.12);
+  position: relative;
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+
+.card .media {
+  width: 100%;
+  height: 180px;
+  background: #dde7e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #4a676b;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card .card-body {
+  padding: 20px;
+}
+
+.card h3 {
+  font-size: 1.4em;
+  color: #005f73;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  color: #08333a;
+}
+
+/* BOTÕES DOS CARDS */
+
+.card button {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #0a9396;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  min-width: 140px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #056c77;
+}
+
+/* ==================== RODAPÉ ==================== */
+
+footer {
+  background: linear-gradient(135deg, #005f73, #0a9396);
+  color: white;
+  text-align: center;
+  padding: 14px;
+  font-size: 0.9em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 600px) {
+
+  header h1 { font-size: 2.1em; }
+
+  nav {
+    height: 70px;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1em;
+    line-height: 1.1em;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    padding: 20px;
+    padding-bottom: 160px;
+    overflow-y: scroll;
+  }
+
+  .card img {
+    height: 160px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -54,13 +203,16 @@ footer { background: linear-gradient(135deg,#005f73,#0a9396); color:white; text-
 </nav>
 
 <div class="content">
+
   <div class="cards">
 
-    <!-- ACUPUNTURA -->
+    <!-- ================= ACUPUNTURA ================= -->
     <div class="card">
-      <!-- try to load reliable picsum image; if fail, user sees .media placeholder -->
       <div class="media" id="media-acup">Imagem Acupuntura</div>
-      <img id="img-acup" src="https://picsum.photos/seed/acupuntura/800/600" alt="Acupuntura" onload="document.getElementById('media-acup').style.display='none';" onerror="this.style.display='none';document.getElementById('media-acup').classList.remove('hidden');">
+      <img id="img-acup" 
+           src="https://images.unsplash.com/photo-1598133894009-177e5a5c8f55?w=800"
+           onload="document.getElementById('media-acup').style.display='none';"
+           onerror="this.style.display='none';document.getElementById('media-acup').classList.remove('hidden');">
       <div class="card-body">
         <h3>Acupuntura</h3>
         <p>Sábados, 09h às 11h30</p>
@@ -70,10 +222,13 @@ footer { background: linear-gradient(135deg,#005f73,#0a9396); color:white; text-
       <button onclick="location.href='detalhes-acupuntura.html'">Ver Detalhes</button>
     </div>
 
-    <!-- ALONGAMENTO -->
+    <!-- ================= ALONGAMENTO ================= -->
     <div class="card">
       <div class="media" id="media-along">Imagem Alongamento</div>
-      <img id="img-along" src="https://picsum.photos/seed/alongamento/800/600" alt="Alongamento" onload="document.getElementById('media-along').style.display='none';" onerror="this.style.display='none';document.getElementById('media-along').classList.remove('hidden');">
+      <img id="img-along" 
+           src="https://images.unsplash.com/photo-1599058917212-d750089bc07a?w=800"
+           onload="document.getElementById('media-along').style.display='none';"
+           onerror="this.style.display='none';document.getElementById('media-along').classList.remove('hidden');">
       <div class="card-body">
         <h3>Sessão de Alongamento</h3>
         <p>Quartas, 07h30 às 08h</p>
@@ -83,10 +238,13 @@ footer { background: linear-gradient(135deg,#005f73,#0a9396); color:white; text-
       <button onclick="location.href='detalhes-alongamento.html'">Ver Detalhes</button>
     </div>
 
-    <!-- MEDIÇÃO DE PRESSÃO -->
+    <!-- ================= PRESSÃO ================= -->
     <div class="card">
-      <div class="media" id="media-press">Imagem Medição</div>
-      <img id="img-press" src="https://picsum.photos/seed/pressao/800/600" alt="Medição de Pressão" onload="document.getElementById('media-press').style.display='none';" onerror="this.style.display='none';document.getElementById('media-press').classList.remove('hidden');">
+      <div class="media" id="media-press">Imagem Pressão</div>
+      <img id="img-press" 
+           src="https://images.unsplash.com/photo-1580281658741-5232a9b1c16e?w=800"
+           onload="document.getElementById('media-press').style.display='none';"
+           onerror="this.style.display='none';document.getElementById('media-press').classList.remove('hidden');">
       <div class="card-body">
         <h3>Medição de Pressão</h3>
         <p>Quintas, 14h às 16h</p>
@@ -96,10 +254,13 @@ footer { background: linear-gradient(135deg,#005f73,#0a9396); color:white; text-
       <button onclick="location.href='detalhes-pressao.html'">Ver Detalhes</button>
     </div>
 
-    <!-- ANUNCIE AQUI -->
+    <!-- ================= ANUNCIE AQUI ================= -->
     <div class="card">
       <div class="media" id="media-anuncie">Imagem Anuncie</div>
-      <img id="img-anuncie" src="https://picsum.photos/seed/anuncie/800/600" alt="Anuncie Aqui" onload="document.getElementById('media-anuncie').style.display='none';" onerror="this.style.display='none';document.getElementById('media-anuncie').classList.remove('hidden');">
+      <img id="img-anuncie" 
+           src="https://picsum.photos/seed/anuncie/800/600"
+           onload="document.getElementById('media-anuncie').style.display='none';"
+           onerror="this.style.display='none';document.getElementById('media-anuncie').classList.remove('hidden');">
       <div class="card-body">
         <h3>Anuncie Aqui</h3>
         <p>Divulgação gratuita de novas oportunidades de saúde e bem-estar.</p>
@@ -108,6 +269,7 @@ footer { background: linear-gradient(135deg,#005f73,#0a9396); color:white; text-
     </div>
 
   </div>
+
 </div>
 
 <footer>© 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054</footer>
