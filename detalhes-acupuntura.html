@@ -1,81 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Detalhes - Acupuntura</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalhes - Acupuntura | Mural Solidário</title>
 
-    header {
-      background: linear-gradient(135deg, #0a9396, #007b7f);
-      color: white;
-      padding: 25px;
-      text-align: center;
-    }
+<style>
+  * { box-sizing: border-box; }
 
-    main {
-      max-width: 800px;
-      margin: 30px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
-    h1 {
-      color: #0a9396;
-      margin-top: 0;
-    }
+  header {
+    background: linear-gradient(135deg, #0a9396, #007b7f);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+  }
 
-    p {
-      line-height: 1.6;
-      font-size: 16px;
-    }
+  header h1 {
+    font-size: 2.8em;
+    margin: 0;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  }
 
-    a {
-      color: #005f73;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  nav {
+    background-color: #005f73;
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 3px solid #0a9396;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 25px;
+    font-weight: bold;
+    font-size: 1.15em;
+  }
 
-    .info {
-      margin-top: 20px;
-    }
+  nav a:hover { text-decoration: underline; }
 
-    .info strong {
-      display: inline-block;
-      width: 150px;
-      color: #333;
-    }
-  </style>
+  main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 40px 25px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: #005f73;
+    font-size: 1.9em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+
+  .info strong {
+    color: #005f73;
+    display: inline-block;
+    width: 160px;
+  }
+
+  a.voltar {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #005f73;
+    text-decoration: none;
+  }
+
+  a.voltar:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    background: linear-gradient(135deg, #0a9396, #007b7f);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.1em;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Detalhes do Serviço</h1>
-  </header>
 
-  <main>
-    <h1>Acupuntura</h1>
-    <p>Atendimento voltado ao equilíbrio corporal e alívio de dores, realizado com técnicas tradicionais chinesas que promovem o bem-estar físico e mental.</p>
+<header>
+  <h1>Detalhes - Acupuntura</h1>
+</header>
 
-    <div class="info">
-      <p><strong>Prestadora:</strong> Nathaly Jimenez</p>
-      <p><strong>Horário:</strong> Sábados, 09h às 11h30</p>
-      <p><strong>Local:</strong> À combinar</p>
-      <p><strong>Agendamento:</strong> Necessário</p>
-    </div>
+<nav>
+  <a href="index.html">Início</a>
+  <a href="cadastro.html">Cadastrar Oportunidade</a>
+  <a href="feedback.html">Avalie sua Experiência</a>
+</nav>
 
-    <p><a href="index.html">← Voltar ao mural</a></p>
-  </main>
+<main>
+
+  <h2>Acupuntura</h2>
+
+  <p>
+    A acupuntura é uma técnica terapêutica milenar que utiliza agulhas em pontos específicos do corpo para promover
+    equilíbrio energético, alívio de dores e bem-estar geral.
+  </p>
+
+  <div class="info">
+    <p><strong>Prestadora:</strong> Nathaly Jimenez</p>
+    <p><strong>Horário:</strong> Sábados, 09h às 11h30</p>
+    <p><strong>Local:</strong> À combinar</p>
+    <p><strong>Agendamento:</strong> Necessário</p>
+    <p><strong>Contato:</strong> <a href="mailto:agendar.acupuntura.tangua@gmail.com">agendar.acupuntura.tangua@gmail.com</a></p>
+  </div>
+
+  <a class="voltar" href="index.html">← Voltar ao mural</a>
+
+</main>
+
+<footer>
+  <p>© 2025 Mural Solidário | Desenvolvido por Fabricico Santiago Dziadek - RU 4364054</p>
+</footer>
+
 </body>
 </html>
+
