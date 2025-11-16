@@ -3,104 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Detalhes - Acupuntura | Mural Solidário</title>
+<title>Detalhes - Acupuntura</title>
 
 <style>
-  * { box-sizing: border-box; }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
   body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: #f2f7f7;
     height: 100vh;
+    color: #08333a;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
   }
 
+  /* ===================== CABEÇALHO ===================== */
   header {
-    background: linear-gradient(135deg, #0a9396, #007b7f);
-    color: white;
+    background: linear-gradient(135deg, #005f73, #0a9396);
+    padding: 18px 10px;
     text-align: center;
-    padding: 20px 10px;
+    color: white;
+    flex-shrink: 0;
   }
 
   header h1 {
-    font-size: 2.8em;
-    margin: 0;
-    font-weight: 800;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    font-size: 2.2em;
+    font-weight: 900;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.35);
   }
 
+  /* ===================== BARRA ===================== */
   nav {
-    background-color: #005f73;
-    text-align: center;
+    background-color: #0a9396;
     padding: 12px 0;
-    border-bottom: 3px solid #0a9396;
-    position: sticky;
-    top: 0;
-    z-index: 200;
+    text-align: center;
+    flex-shrink: 0;
   }
 
   nav a {
-    color: white;
     text-decoration: none;
-    margin: 0 25px;
-    font-weight: bold;
+    color: white;
+    margin: 0 18px;
     font-size: 1.15em;
+    font-weight: bold;
   }
 
-  nav a:hover { text-decoration: underline; }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===================== CONTEÚDO ===================== */
+  .content {
+    overflow-y: auto;
+    padding: 25px;
+    flex: 1;
+    max-width: 900px;
+    margin: auto;
+  }
 
   main {
-    flex: 1;
-    overflow-y: auto;
-    padding: 40px 25px;
-    max-width: 800px;
-    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
   }
 
   h2 {
     color: #005f73;
     font-size: 1.9em;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   p {
-    font-size: 1.2em;
+    font-size: 1.15em;
     line-height: 1.6;
   }
 
-  .info strong {
-    color: #005f73;
-    display: inline-block;
-    width: 160px;
-  }
-
-  a.voltar {
-    display: inline-block;
+  .info {
     margin-top: 20px;
-    font-size: 1.1em;
-    color: #005f73;
-    text-decoration: none;
   }
 
-  a.voltar:hover {
+  .info p {
+    margin-bottom: 10px;
+  }
+
+  .info strong {
+    width: 160px;
+    display: inline-block;
+  }
+
+  a {
+    color: #0a9396;
+    font-weight: bold;
+  }
+
+  a:hover {
     text-decoration: underline;
   }
 
+  /* ===================== RODAPÉ ===================== */
   footer {
-    background: linear-gradient(135deg, #0a9396, #007b7f);
-    color: white;
+    background: linear-gradient(135deg, #005f73, #0a9396);
+    padding: 12px;
     text-align: center;
-    padding: 15px;
-    font-size: 1.1em;
+    color: white;
+    flex-shrink: 0;
+    font-size: 0.9em;
+  }
+
+  /* ===================== MOBILE ===================== */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.9em;
+    }
+
+    nav a {
+      font-size: 1em;
+      margin: 0 10px;
+    }
+
+    .content {
+      padding: 18px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 1.6em;
+    }
   }
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Detalhes - Acupuntura</h1>
+  <h1>Detalhes do Serviço</h1>
 </header>
 
 <nav>
@@ -109,31 +154,33 @@
   <a href="feedback.html">Avalie sua Experiência</a>
 </nav>
 
-<main>
+<div class="content">
+  <main>
 
-  <h2>Acupuntura</h2>
+    <h2>Acupuntura</h2>
 
-  <p>
-    A acupuntura é uma técnica terapêutica milenar que utiliza agulhas em pontos específicos do corpo para promover
-    equilíbrio energético, alívio de dores e bem-estar geral.
-  </p>
+    <p>A acupuntura é uma terapia tradicional que utiliza estímulos em pontos específicos do corpo para promover equilíbrio físico e emocional. Indicada para dores, ansiedade, estresse, entre outros.</p>
 
-  <div class="info">
-    <p><strong>Prestadora:</strong> Nathaly Jimenez</p>
-    <p><strong>Horário:</strong> Sábados, 09h às 11h30</p>
-    <p><strong>Local:</strong> À combinar</p>
-    <p><strong>Agendamento:</strong> Necessário</p>
-    <p><strong>Contato:</strong> <a href="mailto:agendar.acupuntura.tangua@gmail.com">agendar.acupuntura.tangua@gmail.com</a></p>
-  </div>
+    <div class="info">
+      <p><strong>Horário:</strong> Sábados, 09h às 11h30</p>
+      <p><strong>Local:</strong> A combinar</p>
+      <p><strong>Prestadora:</strong> Nathaly Jimenez</p>
+      <p><strong>Contato:</strong> <a href="mailto:agendar.acupuntura.tangua@gmail.com">agendar.acupuntura.tangua@gmail.com</a></p>
+      <p><strong>Agendamento:</strong> Necessário</p>
+    </div>
 
-  <a class="voltar" href="index.html">← Voltar ao mural</a>
+    <p style="margin-top:20px;">
+      <a href="index.html">← Voltar ao mural</a>
+    </p>
 
-</main>
+  </main>
+</div>
 
 <footer>
-  <p>© 2025 Mural Solidário | Desenvolvido por Fabricico Santiago Dziadek - RU 4364054</p>
+  © 2025 Mural Solidário | Desenvolvido por Fabricio Santiago Dziadek - RU 4364054
 </footer>
 
 </body>
 </html>
+
 
