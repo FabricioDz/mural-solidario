@@ -58,12 +58,11 @@
     overflow-y: auto;
     flex: 1;
     padding: 25px;
-    min-height: calc(100vh - 58px - 90px);
     padding-bottom: 140px;
   }
 
   .box {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     background: white;
     padding: 25px;
@@ -71,64 +70,14 @@
     box-shadow: 0 0 12px rgba(0,0,0,0.12);
   }
 
-  h2 {
-    font-size: 1.8em;
-    color: #005f73;
-    margin-bottom: 15px;
-  }
-
-  label { font-size: 1.1em; display: block; margin-top: 15px; }
-
-  input, select, textarea {
+  /* ===================== IFRAME ===================== */
+  iframe {
     width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-  }
-
-  textarea { height: 120px; }
-
-  button, input[type="submit"] {
-    background: #0a9396;
-    color: white;
-    padding: 14px 20px;
+    height: 1750px;
     border: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
 
-  button:hover, input[type="submit"]:hover {
-    background: #056c77;
-  }
-
-  /* Nota 0–10 */
-  .nota-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
-  }
-
-  .nota-container label {
-    margin-top: 0;
-    font-size: 0.95em;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-  }
-
-  .nota-container input[type="radio"] {
-    width: auto;
-    margin-top: 0;
-  }
-
-  /* ===================== RODAPÉ FIXO ===================== */
+  /* ===================== RODAPÉ ===================== */
   footer {
     background: linear-gradient(135deg, #005f73, #0a9396);
     color: white;
@@ -136,7 +85,6 @@
     padding: 14px;
     font-size: 0.9em;
     min-height: 50px;
-
     position: fixed;
     bottom: 0;
     left: 0;
@@ -147,9 +95,7 @@
   /* ===================== MOBILE ===================== */
   @media (max-width: 600px) {
 
-    header h1 { 
-      font-size: 1.9em; 
-    }
+    header h1 { font-size: 1.9em; }
 
     nav {
       height: 70px;
@@ -160,19 +106,21 @@
 
     nav a {
       font-size: 1em;
-      line-height: 1.1em;
-      display: flex;
-      justify-content: center;
       padding: 6px 4px;
     }
 
     .content {
       padding: 18px;
       padding-bottom: 160px !important;
-      overflow-y: scroll;
     }
 
-    .box { padding: 20px; }
+    .box {
+      padding: 15px;
+    }
+
+    iframe {
+      height: 1850px;
+    }
   }
 </style>
 </head>
@@ -194,62 +142,14 @@
 
     <h2>Feedback dos Usuários</h2>
 
-    <form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
-
-      <!-- Segurança -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://fabriciodz.github.io/mural-solidario/obrigado.html">
-
-      <!-- NOVO CAMPO (opcional) -->
-      <label>Nome (opcional):</label>
-      <input type="text" name="nome">
-
-      <label>Qual serviço você utilizou?</label>
-      <select name="servico">
-        <option value="Acupuntura">Acupuntura</option>
-        <option value="Alongamento">Sessão de Alongamento</option>
-        <option value="Medição de Pressão">Medição de Pressão</option>
-        <option value="Outro">Outro</option>
-      </select>
-
-      <label>Data em que utilizou o serviço:</label>
-      <input type="date" name="data_servico">
-
-      <label>Como você avalia a facilidade de uso do site?</label>
-      <select name="facilidade">
-        <option>Fácil</option>
-        <option>Médio</option>
-        <option>Difícil</option>
-      </select>
-
-      <label>Você recomendaria o serviço para outras pessoas?</label>
-      <select name="recomendacao">
-        <option>Sim</option>
-        <option>Não</option>
-      </select>
-
-      <label>Nota geral (0 a 10):</label>
-      <div class="nota-container">
-        <label><input type="radio" name="nota" value="0" required>0</label>
-        <label><input type="radio" name="nota" value="1">1</label>
-        <label><input type="radio" name="nota" value="2">2</label>
-        <label><input type="radio" name="nota" value="3">3</label>
-        <label><input type="radio" name="nota" value="4">4</label>
-        <label><input type="radio" name="nota" value="5">5</label>
-        <label><input type="radio" name="nota" value="6">6</label>
-        <label><input type="radio" name="nota" value="7">7</label>
-        <label><input type="radio" name="nota" value="8">8</label>
-        <label><input type="radio" name="nota" value="9">9</label>
-        <label><input type="radio" name="nota" value="10">10</label>
-      </div>
-
-      <label>Comentários adicionais:</label>
-      <textarea name="comentarios"></textarea>
-
-      <input type="submit" value="Enviar Avaliação">
-
-    </form>
+    <!-- Google Forms incorporado -->
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLScMbadNzs6lyjNFIx5eWgQJ-QhFqwYMglQVxTQP75wm3wGNrQ/viewform?embedded=true" 
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">
+      Carregando…
+    </iframe>
 
   </div>
 </div>
