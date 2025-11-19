@@ -58,12 +58,11 @@
     overflow-y: auto;
     flex: 1;
     padding: 25px;
-    min-height: calc(100vh - 58px - 90px);
     padding-bottom: 140px;
   }
 
   .box {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     background: white;
     padding: 25px;
@@ -71,39 +70,17 @@
     box-shadow: 0 0 12px rgba(0,0,0,0.12);
   }
 
-  h2 {
+  .box h2 {
     font-size: 1.8em;
     color: #005f73;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
   }
 
-  label { font-size: 1.1em; display: block; margin-top: 15px; }
-
-  input, textarea {
+  /* ===================== IFRAME DO FORM ===================== */
+  iframe {
     width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-  }
-
-  textarea { height: 120px; }
-
-  button, input[type="submit"] {
-    background: #0a9396;
-    color: white;
-    padding: 14px 20px;
+    height: 1350px;
     border: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  button:hover, input[type="submit"]:hover {
-    background: #056c77;
   }
 
   /* ===================== RODAPÉ FIXO ===================== */
@@ -129,7 +106,6 @@
       font-size: 1.9em; 
     }
 
-    /* 🔥 Barra igual ao index no mobile */
     nav {
       height: 70px;
       padding: 12px 10px;
@@ -151,7 +127,13 @@
       overflow-y: scroll;
     }
 
-    .box { padding: 20px; }
+    .box { 
+      padding: 15px; 
+    }
+
+    iframe {
+      height: 1500px;
+    }
   }
 </style>
 </head>
@@ -173,33 +155,14 @@
 
     <h2>Cadastro de Novo Serviço</h2>
 
-    <form action="https://formsubmit.co/fabricio.engsoftware@gmail.com" method="POST">
-
-      <!-- segurança -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-
-      <label>Nome do Serviço:</label>
-      <input type="text" name="servico" required>
-
-      <label>Responsável:</label>
-      <input type="text" name="responsavel" required>
-
-      <label>Email para Contato:</label>
-      <input type="email" name="email" required>
-
-      <label>Horários:</label>
-      <input type="text" name="horario" required>
-
-      <label>Local:</label>
-      <input type="text" name="local" required>
-
-      <label>Descrição:</label>
-      <textarea name="descricao" required></textarea>
-
-      <input type="submit" value="Enviar Cadastro">
-
-    </form>
+    <!-- Google Forms incorporado -->
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSclOKWbGIyLB_e4S5HisVA6f7BXENKWtkfedhOveAfG8wm_HQ/viewform?embedded=true" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">
+      Carregando…
+    </iframe>
 
   </div>
 </div>
